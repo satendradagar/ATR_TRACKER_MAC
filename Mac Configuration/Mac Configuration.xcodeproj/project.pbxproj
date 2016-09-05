@@ -7,17 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A8A88101D79C595009A8926 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A880D1D79C595009A8926 /* SMC.swift */; };
+		9A8A88131D79CDB7009A8926 /* CPUUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A88121D79CDB7009A8926 /* CPUUsageController.m */; };
+		9AA8D65E1D771EE400588820 /* SystemInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D65D1D771EE400588820 /* SystemInformationController.swift */; };
+		9AA8D6611D771F1500588820 /* DataLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D6601D771F1500588820 /* DataLogger.swift */; };
+		9AA8D6651D7737A400588820 /* SysControlUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D6641D7737A400588820 /* SysControlUtil.swift */; };
+		9AB77ED41D7833DA0081A829 /* MemoryProfiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB77ED31D7833DA0081A829 /* MemoryProfiller.swift */; };
+		9AB77ED91D7847BC0081A829 /* CommonMacUtilies.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB77ED81D7847BC0081A829 /* CommonMacUtilies.m */; };
+		9ABB80461D7877A100F3420C /* DispalayCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB80451D7877A100F3420C /* DispalayCardController.swift */; };
 		9AC2CF9F1D76D9AD003755C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2CF9E1D76D9AD003755C6 /* AppDelegate.swift */; };
 		9AC2CFA11D76D9AD003755C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC2CFA01D76D9AD003755C6 /* Assets.xcassets */; };
 		9AC2CFA41D76D9AD003755C6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC2CFA21D76D9AD003755C6 /* MainMenu.xib */; };
+		C40B30081D7C691B00FAFE14 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B30071D7C691B00FAFE14 /* ProcessInfo.swift */; };
+		C4ED85731D7B1007001297FD /* CPUInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85721D7B1007001297FD /* CPUInfo.swift */; };
+		C4ED85751D7B27FB001297FD /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85741D7B27FB001297FD /* CPU.swift */; };
+		C4ED857C1D7B2862001297FD /* Int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85791D7B2862001297FD /* Int32.swift */; };
+		C4ED857D1D7B2862001297FD /* UInt32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857A1D7B2862001297FD /* UInt32.swift */; };
+		C4ED857E1D7B2862001297FD /* UInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857B1D7B2862001297FD /* UInt64.swift */; };
+		C4ED85801D7B29B0001297FD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857F1D7B29B0001297FD /* Network.swift */; };
+		C4ED85821D7B2D37001297FD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85811D7B2D37001297FD /* Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A8A880C1D79C595009A8926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A8A880D1D79C595009A8926 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
+		9A8A880E1D79C595009A8926 /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
+		9A8A88111D79CDB7009A8926 /* CPUUsageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUUsageController.h; sourceTree = "<group>"; };
+		9A8A88121D79CDB7009A8926 /* CPUUsageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUUsageController.m; sourceTree = "<group>"; };
+		9AA8D65D1D771EE400588820 /* SystemInformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInformationController.swift; sourceTree = "<group>"; };
+		9AA8D6601D771F1500588820 /* DataLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogger.swift; sourceTree = "<group>"; };
+		9AA8D6621D772C0000588820 /* TODO_List.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = TODO_List.rtf; sourceTree = "<group>"; };
+		9AA8D6641D7737A400588820 /* SysControlUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysControlUtil.swift; sourceTree = "<group>"; };
+		9AB77ED31D7833DA0081A829 /* MemoryProfiller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryProfiller.swift; sourceTree = "<group>"; };
+		9AB77ED61D7847BC0081A829 /* Mac Configuration-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mac Configuration-Bridging-Header.h"; sourceTree = "<group>"; };
+		9AB77ED71D7847BC0081A829 /* CommonMacUtilies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacUtilies.h; sourceTree = "<group>"; };
+		9AB77ED81D7847BC0081A829 /* CommonMacUtilies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonMacUtilies.m; sourceTree = "<group>"; };
+		9ABB80451D7877A100F3420C /* DispalayCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispalayCardController.swift; sourceTree = "<group>"; };
 		9AC2CF9B1D76D9AD003755C6 /* Mac Configuration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Configuration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC2CF9E1D76D9AD003755C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC2CFA01D76D9AD003755C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AC2CFA31D76D9AD003755C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9AC2CFA51D76D9AD003755C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C40B30071D7C691B00FAFE14 /* ProcessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
+		C4ED85721D7B1007001297FD /* CPUInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPUInfo.swift; sourceTree = "<group>"; };
+		C4ED85741D7B27FB001297FD /* CPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
+		C4ED85791D7B2862001297FD /* Int32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int32.swift; sourceTree = "<group>"; };
+		C4ED857A1D7B2862001297FD /* UInt32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UInt32.swift; sourceTree = "<group>"; };
+		C4ED857B1D7B2862001297FD /* UInt64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UInt64.swift; sourceTree = "<group>"; };
+		C4ED857F1D7B29B0001297FD /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C4ED85811D7B2D37001297FD /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A8A880B1D79C595009A8926 /* SMCKit */ = {
+			isa = PBXGroup;
+			children = (
+				9A8A880C1D79C595009A8926 /* Info.plist */,
+				9A8A880D1D79C595009A8926 /* SMC.swift */,
+				9A8A880E1D79C595009A8926 /* SMCKit.h */,
+			);
+			name = SMCKit;
+			path = UtilityClasses/SMCKit;
+			sourceTree = "<group>";
+		};
+		9AA8D65F1D771F0400588820 /* DataLogging */ = {
+			isa = PBXGroup;
+			children = (
+				9AA8D6601D771F1500588820 /* DataLogger.swift */,
+			);
+			path = DataLogging;
+			sourceTree = "<group>";
+		};
 		9AC2CF921D76D9AC003755C6 = {
 			isa = PBXGroup;
 			children = (
@@ -50,12 +107,48 @@
 		9AC2CF9D1D76D9AD003755C6 /* Mac Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				C4ED85781D7B2862001297FD /* Extensions */,
+				9AA8D65F1D771F0400588820 /* DataLogging */,
+				9AC2CFAB1D76DAE3003755C6 /* UtilityClasses */,
+				9A8A880B1D79C595009A8926 /* SMCKit */,
 				9AC2CF9E1D76D9AD003755C6 /* AppDelegate.swift */,
 				9AC2CFA01D76D9AD003755C6 /* Assets.xcassets */,
 				9AC2CFA21D76D9AD003755C6 /* MainMenu.xib */,
 				9AC2CFA51D76D9AD003755C6 /* Info.plist */,
+				9AA8D6621D772C0000588820 /* TODO_List.rtf */,
 			);
 			path = "Mac Configuration";
+			sourceTree = "<group>";
+		};
+		9AC2CFAB1D76DAE3003755C6 /* UtilityClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9AA8D65D1D771EE400588820 /* SystemInformationController.swift */,
+				9AB77ED31D7833DA0081A829 /* MemoryProfiller.swift */,
+				9ABB80451D7877A100F3420C /* DispalayCardController.swift */,
+				C4ED857F1D7B29B0001297FD /* Network.swift */,
+				C4ED85721D7B1007001297FD /* CPUInfo.swift */,
+				C4ED85811D7B2D37001297FD /* Timer.swift */,
+				C4ED85741D7B27FB001297FD /* CPU.swift */,
+				C40B30071D7C691B00FAFE14 /* ProcessInfo.swift */,
+				9AB77ED71D7847BC0081A829 /* CommonMacUtilies.h */,
+				9AB77ED81D7847BC0081A829 /* CommonMacUtilies.m */,
+				9A8A88111D79CDB7009A8926 /* CPUUsageController.h */,
+				9A8A88121D79CDB7009A8926 /* CPUUsageController.m */,
+				9AA8D6641D7737A400588820 /* SysControlUtil.swift */,
+				9AB77ED61D7847BC0081A829 /* Mac Configuration-Bridging-Header.h */,
+			);
+			path = UtilityClasses;
+			sourceTree = "<group>";
+		};
+		C4ED85781D7B2862001297FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4ED85791D7B2862001297FD /* Int32.swift */,
+				C4ED857A1D7B2862001297FD /* UInt32.swift */,
+				C4ED857B1D7B2862001297FD /* UInt64.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +183,7 @@
 				TargetAttributes = {
 					9AC2CF9A1D76D9AD003755C6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -128,7 +222,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4ED857D1D7B2862001297FD /* UInt32.swift in Sources */,
+				C4ED85731D7B1007001297FD /* CPUInfo.swift in Sources */,
+				9AB77ED41D7833DA0081A829 /* MemoryProfiller.swift in Sources */,
 				9AC2CF9F1D76D9AD003755C6 /* AppDelegate.swift in Sources */,
+				C4ED85751D7B27FB001297FD /* CPU.swift in Sources */,
+				C4ED85801D7B29B0001297FD /* Network.swift in Sources */,
+				9AB77ED91D7847BC0081A829 /* CommonMacUtilies.m in Sources */,
+				C40B30081D7C691B00FAFE14 /* ProcessInfo.swift in Sources */,
+				C4ED85821D7B2D37001297FD /* Timer.swift in Sources */,
+				9AA8D6651D7737A400588820 /* SysControlUtil.swift in Sources */,
+				C4ED857C1D7B2862001297FD /* Int32.swift in Sources */,
+				9A8A88131D79CDB7009A8926 /* CPUUsageController.m in Sources */,
+				C4ED857E1D7B2862001297FD /* UInt64.swift in Sources */,
+				9AA8D6611D771F1500588820 /* DataLogger.swift in Sources */,
+				9AA8D65E1D771EE400588820 /* SystemInformationController.swift in Sources */,
+				9ABB80461D7877A100F3420C /* DispalayCardController.swift in Sources */,
+				9A8A88101D79C595009A8926 /* SMC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,11 +342,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mac Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corebits.Mac-Configuration";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac Configuration/UtilityClasses/Mac Configuration-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -244,11 +358,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Mac Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corebits.Mac-Configuration";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac Configuration/UtilityClasses/Mac Configuration-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -271,6 +388,7 @@
 				9AC2CFAA1D76D9AD003755C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
