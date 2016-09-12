@@ -18,4 +18,9 @@
 
 +(void) getCpuDetails;
 
++ (void)getIPWithcompletionHandler:(void (^)(NSString *ipAddress)) responseHandler;
+
+
++ (NSString *)getLocalIPAddress;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "CommonMacUtilies.h"
 #import <CoreAudio/CoreAudio.h>
+#import <asl.h>
 
 struct cpusample {
     uint64_t totalSystemTime;
@@ -214,6 +215,129 @@ void printSample(struct cpusample *sample)
     NSLog(@"system: %f", (double)sample->totalSystemTime/(double)onePercent);
     NSLog(@"user: %f", (double)sample->totalUserTime/(double)onePercent);
     NSLog(@"idle: %f", (double)sample->totalIdleTime/(double)onePercent);
+}
+
+
++ (void)getIPWithcompletionHandler:(void (^)(NSString *ipAddress)) responseHandler
+{
+    NSURL *iPURL = [NSURL URLWithString:@"http://ip-api.com/json"];
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:iPURL];
+        //    [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
+    [req setValue:@"text/json" forHTTPHeaderField:@"Accept"];
+    [req setHTTPMethod:@"GET"];
+    req.timeoutInterval = 45;
+    
+    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        
+        if (nil != data) {
+            
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            if (dict) {
+                NSLog(@"Response: %@",dict);
+                responseHandler([dict objectForKey:@"query"]);//Successfull case
+            }
+            else{
+                
+                responseHandler(nil);
+            }
+        }
+        else{
+            responseHandler(nil);
+            
+        }
+    }];
+    
+}
+
++ (NSString *)getLocalIPAddress
+{
+    NSArray *ipAddresses = [[NSHost currentHost] addresses];
+    NSArray *sortedIPAddresses = [ipAddresses sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    numberFormatter.allowsFloats = NO;
+    
+    for (NSString *potentialIPAddress in sortedIPAddresses)
+        {
+        if ([potentialIPAddress isEqualToString:@"127.0.0.1"]) {
+            continue;
+        }
+        
+        NSArray *ipParts = [potentialIPAddress componentsSeparatedByString:@"."];
+        
+        BOOL isMatch = YES;
+        
+        for (NSString *ipPart in ipParts) {
+            if (![numberFormatter numberFromString:ipPart]) {
+                isMatch = NO;
+                break;
+            }
+        }
+        if (isMatch) {
+            return potentialIPAddress;
+        }
+        }
+    
+        // No IP found
+    return @"?.?.?.?";
+}
+
+
+/*
+ static func systemLogs() -> [[String: String]] {
+ let q = asl_new(UInt32(ASL_TYPE_QUERY))
+ var logs = [[String: String]]()
+ let r = asl_search(nil, q)
+ var m = asl_next(r)
+ while m != nil {
+ var logDict = [String: String]()
+ var i: UInt32 = 0
+ while true {
+ if let key = String.fromCString(asl_key(m, i)) {
+ let val = String.fromCString(asl_get(m, key))
+ logDict[key] = val
+ i++
+ } else {
+ break
+ }
+ }
+ m = asl_next(r)
+ logs.append(logDict)
+ }
+ asl_release(r)
+ return logs
+ }
+ */
+
+-(NSArray*)console
+{
+    NSMutableArray *consoleLog = [NSMutableArray array];
+    
+    aslclient client = asl_open(NULL, NULL, ASL_OPT_STDERR);
+    
+    aslmsg query = asl_new(ASL_TYPE_QUERY);
+    asl_set_query(query, ASL_KEY_MSG, NULL, ASL_QUERY_OP_NOT_EQUAL);
+    aslresponse response = asl_search(client, query);
+    
+    asl_free(query);
+    
+    aslmsg message;
+    while((message = asl_next(response)) != NULL)
+        {
+        const char *msg = asl_get(message, ASL_KEY_MSG);
+        if (NULL != msg) {
+            
+            [consoleLog addObject:[NSString stringWithCString:msg encoding:NSUTF8StringEncoding]];
+            
+        }
+        }
+    if (message != NULL) {
+        asl_free(message);
+    }
+    asl_free(response);
+    asl_close(client);
+    
+    return consoleLog;
 }
 
 

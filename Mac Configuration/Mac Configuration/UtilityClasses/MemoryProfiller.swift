@@ -29,25 +29,14 @@ struct MemoryProfiller {
     static var usedRam:Int64{
         
         let vmstat = CommonMacUtilies.memoryStatus();
-        let total:Int64 = Int64(vmstat.wire_count + vmstat.active_count + vmstat.inactive_count + vmstat.free_count);
-//            let  wired:double = vmstat.wire_count / total;
-//            let  active :double= vmstat.active_count / total;
-//            let  inactive:double = vmstat.inactive_count / total;
-        var  freePages = Int64(vmstat.free_count);
+
+        let  freePages = Int64(vmstat.free_count + vmstat.inactive_count);
 
         let totalMemory = totalRam;
-//        let pageSize = vm_page_size
-//        let freePages = CommonMacUtilies.freeMemory()
-        freePages = (freePages * totalMemory)/total
-//        let totalFreeSize = Int64(freePages) * Int64(pageSize)
-        
-        let usedMemory = totalMemory - freePages
+        let pageSize = vm_page_size
+        let freeMemory = freePages * Int64(pageSize)
+        let usedMemory = totalMemory - freeMemory
         return Int64(usedMemory)
-//        //HOST_VM_INFO_COUNT
-//        let count:mach_msg_type_number_t ;
-//        let vmstat:vm_statistics_data_t ;
-//        if(KERN_SUCCESS != host_statistics(mach_host_self(), HOST_VM_INFO, (host_info_t)&vmstat, &count))
-        // An error occurred
     }
     
     static func getVolumeFreeSpace(volumePath:String) -> String {

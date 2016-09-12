@@ -18,7 +18,7 @@ class ProcessInfo {
         
         for app:NSRunningApplication in runningApps {
             
-        appNames += "\n\(app.localizedName)"
+        appNames += "\n\(app.localizedName!)"
             
         }
         return appNames;

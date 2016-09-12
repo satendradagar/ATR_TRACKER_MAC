@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A3EDC691D856CAE00FEC67F /* SystemEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC681D856CAE00FEC67F /* SystemEventLogger.swift */; };
+		9A3EDC701D857B8200FEC67F /* ASLAttributeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6B1D857B8200FEC67F /* ASLAttributeKey.swift */; };
+		9A3EDC711D857B8200FEC67F /* ASLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6C1D857B8200FEC67F /* ASLClient.swift */; };
+		9A3EDC721D857B8200FEC67F /* ASLObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6D1D857B8200FEC67F /* ASLObject.swift */; };
+		9A3EDC731D857B8200FEC67F /* ASLPriorityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6E1D857B8200FEC67F /* ASLPriorityLevel.swift */; };
 		9A8A88101D79C595009A8926 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A880D1D79C595009A8926 /* SMC.swift */; };
 		9A8A88131D79CDB7009A8926 /* CPUUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A88121D79CDB7009A8926 /* CPUUsageController.m */; };
 		9AA8D65E1D771EE400588820 /* SystemInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D65D1D771EE400588820 /* SystemInformationController.swift */; };
@@ -29,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A3EDC681D856CAE00FEC67F /* SystemEventLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemEventLogger.swift; sourceTree = "<group>"; };
+		9A3EDC6B1D857B8200FEC67F /* ASLAttributeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLAttributeKey.swift; sourceTree = "<group>"; };
+		9A3EDC6C1D857B8200FEC67F /* ASLClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLClient.swift; sourceTree = "<group>"; };
+		9A3EDC6D1D857B8200FEC67F /* ASLObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLObject.swift; sourceTree = "<group>"; };
+		9A3EDC6E1D857B8200FEC67F /* ASLPriorityLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLPriorityLevel.swift; sourceTree = "<group>"; };
+		9A3EDC6F1D857B8200FEC67F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9A8A880C1D79C595009A8926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8A880D1D79C595009A8926 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
 		9A8A880E1D79C595009A8926 /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
@@ -69,6 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A3EDC6A1D857B8200FEC67F /* ALConsole */ = {
+			isa = PBXGroup;
+			children = (
+				9A3EDC6B1D857B8200FEC67F /* ASLAttributeKey.swift */,
+				9A3EDC6C1D857B8200FEC67F /* ASLClient.swift */,
+				9A3EDC6D1D857B8200FEC67F /* ASLObject.swift */,
+				9A3EDC6E1D857B8200FEC67F /* ASLPriorityLevel.swift */,
+				9A3EDC6F1D857B8200FEC67F /* README.md */,
+			);
+			path = ALConsole;
+			sourceTree = "<group>";
+		};
 		9A8A880B1D79C595009A8926 /* SMCKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +159,8 @@
 				9A8A88111D79CDB7009A8926 /* CPUUsageController.h */,
 				9A8A88121D79CDB7009A8926 /* CPUUsageController.m */,
 				9AA8D6641D7737A400588820 /* SysControlUtil.swift */,
+				9A3EDC681D856CAE00FEC67F /* SystemEventLogger.swift */,
+				9A3EDC6A1D857B8200FEC67F /* ALConsole */,
 				9AB77ED61D7847BC0081A829 /* Mac Configuration-Bridging-Header.h */,
 			);
 			path = UtilityClasses;
@@ -223,6 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4ED857D1D7B2862001297FD /* UInt32.swift in Sources */,
+				9A3EDC711D857B8200FEC67F /* ASLClient.swift in Sources */,
+				9A3EDC721D857B8200FEC67F /* ASLObject.swift in Sources */,
 				C4ED85731D7B1007001297FD /* CPUInfo.swift in Sources */,
 				9AB77ED41D7833DA0081A829 /* MemoryProfiller.swift in Sources */,
 				9AC2CF9F1D76D9AD003755C6 /* AppDelegate.swift in Sources */,
@@ -232,9 +259,12 @@
 				C40B30081D7C691B00FAFE14 /* ProcessInfo.swift in Sources */,
 				C4ED85821D7B2D37001297FD /* Timer.swift in Sources */,
 				9AA8D6651D7737A400588820 /* SysControlUtil.swift in Sources */,
+				9A3EDC701D857B8200FEC67F /* ASLAttributeKey.swift in Sources */,
+				9A3EDC731D857B8200FEC67F /* ASLPriorityLevel.swift in Sources */,
 				C4ED857C1D7B2862001297FD /* Int32.swift in Sources */,
 				9A8A88131D79CDB7009A8926 /* CPUUsageController.m in Sources */,
 				C4ED857E1D7B2862001297FD /* UInt64.swift in Sources */,
+				9A3EDC691D856CAE00FEC67F /* SystemEventLogger.swift in Sources */,
 				9AA8D6611D771F1500588820 /* DataLogger.swift in Sources */,
 				9AA8D65E1D771EE400588820 /* SystemInformationController.swift in Sources */,
 				9ABB80461D7877A100F3420C /* DispalayCardController.swift in Sources */,

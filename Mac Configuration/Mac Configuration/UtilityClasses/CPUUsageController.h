@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface CPUUsageController : NSObject
 
++(void)samplePrint;
+
 + (void)currentCpuInfo;
+
++(void)printNetwork;
 
 @end

@@ -14,9 +14,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    @IBOutlet var mainTextView: NSTextView!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+//        CPUUsageController.samplePrint();
+//        return;
         DataLogger.logMessage("OS Name", message: SystemInformationController.osName()!)
         DataLogger.logMessage("OS Version", message: SystemInformationController.osVersion()!)
         DataLogger.logMessage("Machine Name", message: SystemInformationController.machineName()!)
@@ -58,6 +61,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        CPUInfo.cpuLoadDetails()
         
 //        CommonMacUtilies.getCpuDetails();
+        CommonMacUtilies.getIPWithcompletionHandler { (ipAddress) in
+         
+            if nil != ipAddress{
+            DataLogger.logMessage("IP Address", message:ipAddress)
+            }
+
+        }
+        CPUUsageController.printNetwork();
+        SystemEventLogger.getConsoleLogForAnHour();
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

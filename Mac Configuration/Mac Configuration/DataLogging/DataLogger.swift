@@ -12,9 +12,18 @@ import Cocoa
 class DataLogger {
     
     static func logMessage(let label:String , message:String ) -> Void {
-    
-        print("\(label): \(message)");
-        
+        let delegate: AppDelegate = NSApp.delegate as! AppDelegate
+        let printableStr = "\(label): \(message)\n"
+        print(printableStr);
+        delegate.mainTextView.append(printableStr)
+        delegate.mainTextView.append("---------------------------------------------------------------------------------------------\n\n")
     }
     
+}
+
+extension NSTextView {
+    func append(string: String) {
+        self.textStorage?.appendAttributedString(NSAttributedString(string: string))
+        self.scrollToEndOfDocument(nil)
+    }
 }
