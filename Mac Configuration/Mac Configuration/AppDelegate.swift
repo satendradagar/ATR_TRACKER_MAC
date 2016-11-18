@@ -61,6 +61,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        CPUInfo.cpuLoadDetails()
         
 //        CommonMacUtilies.getCpuDetails();
+        dispatch_async(dispatch_get_main_queue()) {
+            
+            let logs = SystemEventLogger.getConsoleLogForAnHour();
+            var allMeesages = String();
+            
+            if (logs != nil) {
+                
+                for msg in logs! {
+                    allMeesages += "\n"
+                    allMeesages += msg
+                }
+                
+            }
+            DataLogger.logMessage("Last Hour events:", message:allMeesages)
+            
+
+        };
         CommonMacUtilies.getIPWithcompletionHandler { (ipAddress) in
          
             if nil != ipAddress{
@@ -69,7 +86,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         }
         CPUUsageController.printNetwork();
-        SystemEventLogger.getConsoleLogForAnHour();
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

@@ -252,7 +252,7 @@ public final class ASLClient
      */
     public func search(query: ASLQueryObject, callback: ASLQueryObject.ResultCallback)
     {
-        let dispatch = dispatcher()
+        let dispatch = dispatcher(nil, synchronously: true)
         dispatch {
             let results = asl_search(self.client, query.aslObject)
 

@@ -23,16 +23,18 @@ static func getConsoleLogForAnHour() -> [String]? {
         query.setQueryKey(ASLAttributeKey.level, value: ASLPriorityLevel.warning.priorityString, operation: ASLQueryObject.Operation.lessThanOrEqualTo, modifiers: ASLQueryObject.OperationModifiers.none)
         query.setQueryKey(ASLAttributeKey.time, value: Int(NSDate().timeIntervalSince1970 - (60 * 5)), operation: ASLQueryObject.Operation.greaterThanOrEqualTo, modifiers: ASLQueryObject.OperationModifiers.none)
         let client = ASLClient()
-        
+        var logs:[String]? = []
         client.search(query) { record in
             if let record = record {
-                print(record.timestamp.descriptionWithLocale(NSLocale.currentLocale()) + ":::::" + record.message)
+                let message = record.timestamp.description + ":::::" + record.message;
+                print(message)
+                logs?.append(message)
                 // we have a search query result record; process it here
             } else {
                 // there are no more records to process; no further callbacks will be issued
             }
             return true   // returning true to indicate we want more results if available
         }
-    return nil;
+    return logs;
     }
 }
