@@ -4,14 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mac Configuration copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Mac Configuration.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MacConfig.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9A6C99431E07D9EE0079DD0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A6C99671E07E1680079DD0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9AC2CF9A1D76D9AD003755C6</key>
 		<dict>
 			<key>primary</key>

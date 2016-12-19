@@ -83,9 +83,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if nil != ipAddress{
             DataLogger.logMessage("IP Address", message:ipAddress)
             }
+            let dict = DataLogger.logDictionary()
+            
+            let jsonData = try! NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions.PrettyPrinted)
+            
+            let jsonString = NSString(data: jsonData, encoding: NSUTF8StringEncoding)! as String
+//            let task = Process()
+//            task.launchPath = cmd
+//            task.arguments = args
 
+//            let outpipe = NSPipe()
+//            task.standardOutput = outpipe
+//            
+            print(jsonString)
         }
-        CPUUsageController.printNetwork();
+//        CPUUsageController.printNetwork();
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

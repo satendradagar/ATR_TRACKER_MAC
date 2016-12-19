@@ -12,6 +12,54 @@
 		9A3EDC711D857B8200FEC67F /* ASLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6C1D857B8200FEC67F /* ASLClient.swift */; };
 		9A3EDC721D857B8200FEC67F /* ASLObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6D1D857B8200FEC67F /* ASLObject.swift */; };
 		9A3EDC731D857B8200FEC67F /* ASLPriorityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6E1D857B8200FEC67F /* ASLPriorityLevel.swift */; };
+		9A6C99451E07D9EE0079DD0E /* UInt32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857A1D7B2862001297FD /* UInt32.swift */; };
+		9A6C99461E07D9EE0079DD0E /* ASLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6C1D857B8200FEC67F /* ASLClient.swift */; };
+		9A6C99471E07D9EE0079DD0E /* ASLObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6D1D857B8200FEC67F /* ASLObject.swift */; };
+		9A6C99481E07D9EE0079DD0E /* CPUInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85721D7B1007001297FD /* CPUInfo.swift */; };
+		9A6C99491E07D9EE0079DD0E /* MemoryProfiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB77ED31D7833DA0081A829 /* MemoryProfiller.swift */; };
+		9A6C994A1E07D9EE0079DD0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2CF9E1D76D9AD003755C6 /* AppDelegate.swift */; };
+		9A6C994B1E07D9EE0079DD0E /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85741D7B27FB001297FD /* CPU.swift */; };
+		9A6C994C1E07D9EE0079DD0E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857F1D7B29B0001297FD /* Network.swift */; };
+		9A6C994D1E07D9EE0079DD0E /* CommonMacUtilies.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB77ED81D7847BC0081A829 /* CommonMacUtilies.m */; };
+		9A6C994E1E07D9EE0079DD0E /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B30071D7C691B00FAFE14 /* ProcessInfo.swift */; };
+		9A6C994F1E07D9EE0079DD0E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85811D7B2D37001297FD /* Timer.swift */; };
+		9A6C99501E07D9EE0079DD0E /* SysControlUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D6641D7737A400588820 /* SysControlUtil.swift */; };
+		9A6C99511E07D9EE0079DD0E /* ASLAttributeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6B1D857B8200FEC67F /* ASLAttributeKey.swift */; };
+		9A6C99521E07D9EE0079DD0E /* ASLPriorityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6E1D857B8200FEC67F /* ASLPriorityLevel.swift */; };
+		9A6C99531E07D9EE0079DD0E /* Int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85791D7B2862001297FD /* Int32.swift */; };
+		9A6C99541E07D9EE0079DD0E /* CPUUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A88121D79CDB7009A8926 /* CPUUsageController.m */; };
+		9A6C99551E07D9EE0079DD0E /* UInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857B1D7B2862001297FD /* UInt64.swift */; };
+		9A6C99561E07D9EE0079DD0E /* SystemEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC681D856CAE00FEC67F /* SystemEventLogger.swift */; };
+		9A6C99571E07D9EE0079DD0E /* DataLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D6601D771F1500588820 /* DataLogger.swift */; };
+		9A6C99581E07D9EE0079DD0E /* SystemInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D65D1D771EE400588820 /* SystemInformationController.swift */; };
+		9A6C99591E07D9EE0079DD0E /* DispalayCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB80451D7877A100F3420C /* DispalayCardController.swift */; };
+		9A6C995A1E07D9EE0079DD0E /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A880D1D79C595009A8926 /* SMC.swift */; };
+		9A6C995D1E07D9EE0079DD0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC2CFA01D76D9AD003755C6 /* Assets.xcassets */; };
+		9A6C995E1E07D9EE0079DD0E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC2CFA21D76D9AD003755C6 /* MainMenu.xib */; };
+		9A6C996B1E07E1680079DD0E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6C996A1E07E1680079DD0E /* main.swift */; };
+		9A6C996F1E07E1F40079DD0E /* DataLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D6601D771F1500588820 /* DataLogger.swift */; };
+		9A6C99701E07E21E0079DD0E /* SystemInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D65D1D771EE400588820 /* SystemInformationController.swift */; };
+		9A6C99711E07E2210079DD0E /* MemoryProfiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB77ED31D7833DA0081A829 /* MemoryProfiller.swift */; };
+		9A6C99721E07E2240079DD0E /* DispalayCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB80451D7877A100F3420C /* DispalayCardController.swift */; };
+		9A6C99731E07E2260079DD0E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857F1D7B29B0001297FD /* Network.swift */; };
+		9A6C99741E07E2290079DD0E /* CPUInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85721D7B1007001297FD /* CPUInfo.swift */; };
+		9A6C99751E07E22B0079DD0E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85811D7B2D37001297FD /* Timer.swift */; };
+		9A6C99761E07E2310079DD0E /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B30071D7C691B00FAFE14 /* ProcessInfo.swift */; };
+		9A6C99771E07E2340079DD0E /* CommonMacUtilies.h in Sources */ = {isa = PBXBuildFile; fileRef = 9AB77ED71D7847BC0081A829 /* CommonMacUtilies.h */; };
+		9A6C99781E07E2370079DD0E /* CommonMacUtilies.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB77ED81D7847BC0081A829 /* CommonMacUtilies.m */; };
+		9A6C99791E07E23A0079DD0E /* CPUUsageController.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A88111D79CDB7009A8926 /* CPUUsageController.h */; };
+		9A6C997A1E07E23D0079DD0E /* CPUUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A88121D79CDB7009A8926 /* CPUUsageController.m */; };
+		9A6C997B1E07E2400079DD0E /* SysControlUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D6641D7737A400588820 /* SysControlUtil.swift */; };
+		9A6C997C1E07E2430079DD0E /* SystemEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC681D856CAE00FEC67F /* SystemEventLogger.swift */; };
+		9A6C997D1E07E2460079DD0E /* ASLAttributeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6B1D857B8200FEC67F /* ASLAttributeKey.swift */; };
+		9A6C997E1E07E2480079DD0E /* ASLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6C1D857B8200FEC67F /* ASLClient.swift */; };
+		9A6C997F1E07E24A0079DD0E /* ASLObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6D1D857B8200FEC67F /* ASLObject.swift */; };
+		9A6C99801E07E24C0079DD0E /* ASLPriorityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EDC6E1D857B8200FEC67F /* ASLPriorityLevel.swift */; };
+		9A6C99811E07E2570079DD0E /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A880D1D79C595009A8926 /* SMC.swift */; };
+		9A6C99831E07E2F80079DD0E /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85741D7B27FB001297FD /* CPU.swift */; };
+		9A6C99841E07E3070079DD0E /* Int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85791D7B2862001297FD /* Int32.swift */; };
+		9A6C99851E07E3090079DD0E /* UInt32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857A1D7B2862001297FD /* UInt32.swift */; };
+		9A6C99861E07E30B0079DD0E /* UInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857B1D7B2862001297FD /* UInt64.swift */; };
 		9A8A88101D79C595009A8926 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A880D1D79C595009A8926 /* SMC.swift */; };
 		9A8A88131D79CDB7009A8926 /* CPUUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A88121D79CDB7009A8926 /* CPUUsageController.m */; };
 		9AA8D65E1D771EE400588820 /* SystemInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D65D1D771EE400588820 /* SystemInformationController.swift */; };
@@ -33,6 +81,18 @@
 		C4ED85821D7B2D37001297FD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85811D7B2D37001297FD /* Timer.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9A6C99661E07E1680079DD0E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9A3EDC681D856CAE00FEC67F /* SystemEventLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemEventLogger.swift; sourceTree = "<group>"; };
 		9A3EDC6B1D857B8200FEC67F /* ASLAttributeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLAttributeKey.swift; sourceTree = "<group>"; };
@@ -40,6 +100,10 @@
 		9A3EDC6D1D857B8200FEC67F /* ASLObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLObject.swift; sourceTree = "<group>"; };
 		9A3EDC6E1D857B8200FEC67F /* ASLPriorityLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLPriorityLevel.swift; sourceTree = "<group>"; };
 		9A3EDC6F1D857B8200FEC67F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9A6C99621E07D9EE0079DD0E /* Mac Configuration copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Configuration copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6C99631E07D9EE0079DD0E /* Mac Configuration copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mac Configuration copy-Info.plist"; path = "/Users/satendrasingh/Documents/External/ATERA_MAC/Mac Configuration/Mac Configuration copy-Info.plist"; sourceTree = "<absolute>"; };
+		9A6C99681E07E1680079DD0E /* MacConfig */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacConfig; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6C996A1E07E1680079DD0E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9A8A880C1D79C595009A8926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8A880D1D79C595009A8926 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
 		9A8A880E1D79C595009A8926 /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
@@ -70,6 +134,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A6C995B1E07D9EE0079DD0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A6C99651E07E1680079DD0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AC2CF981D76D9AD003755C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,6 +168,14 @@
 				9A3EDC6F1D857B8200FEC67F /* README.md */,
 			);
 			path = ALConsole;
+			sourceTree = "<group>";
+		};
+		9A6C99691E07E1680079DD0E /* MacConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9A6C996A1E07E1680079DD0E /* main.swift */,
+			);
+			path = MacConfig;
 			sourceTree = "<group>";
 		};
 		9A8A880B1D79C595009A8926 /* SMCKit */ = {
@@ -115,7 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				9AC2CF9D1D76D9AD003755C6 /* Mac Configuration */,
+				9A6C99691E07E1680079DD0E /* MacConfig */,
 				9AC2CF9C1D76D9AD003755C6 /* Products */,
+				9A6C99631E07D9EE0079DD0E /* Mac Configuration copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				9AC2CF9B1D76D9AD003755C6 /* Mac Configuration.app */,
+				9A6C99621E07D9EE0079DD0E /* Mac Configuration copy.app */,
+				9A6C99681E07E1680079DD0E /* MacConfig */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +269,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9A6C99431E07D9EE0079DD0E /* Mac Configuration copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A6C995F1E07D9EE0079DD0E /* Build configuration list for PBXNativeTarget "Mac Configuration copy" */;
+			buildPhases = (
+				9A6C99441E07D9EE0079DD0E /* Sources */,
+				9A6C995B1E07D9EE0079DD0E /* Frameworks */,
+				9A6C995C1E07D9EE0079DD0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mac Configuration copy";
+			productName = "Mac Configuration";
+			productReference = 9A6C99621E07D9EE0079DD0E /* Mac Configuration copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A6C99671E07E1680079DD0E /* MacConfig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A6C996C1E07E1680079DD0E /* Build configuration list for PBXNativeTarget "MacConfig" */;
+			buildPhases = (
+				9A6C99641E07E1680079DD0E /* Sources */,
+				9A6C99651E07E1680079DD0E /* Frameworks */,
+				9A6C99661E07E1680079DD0E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacConfig;
+			productName = MacConfig;
+			productReference = 9A6C99681E07E1680079DD0E /* MacConfig */;
+			productType = "com.apple.product-type.tool";
+		};
 		9AC2CF9A1D76D9AD003755C6 /* Mac Configuration */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AC2CFA81D76D9AD003755C6 /* Build configuration list for PBXNativeTarget "Mac Configuration" */;
@@ -202,10 +326,14 @@
 		9AC2CF931D76D9AC003755C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Satendra Singh";
 				TargetAttributes = {
+					9A6C99671E07E1680079DD0E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
 					9AC2CF9A1D76D9AD003755C6 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
@@ -226,11 +354,22 @@
 			projectRoot = "";
 			targets = (
 				9AC2CF9A1D76D9AD003755C6 /* Mac Configuration */,
+				9A6C99431E07D9EE0079DD0E /* Mac Configuration copy */,
+				9A6C99671E07E1680079DD0E /* MacConfig */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A6C995C1E07D9EE0079DD0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A6C995D1E07D9EE0079DD0E /* Assets.xcassets in Resources */,
+				9A6C995E1E07D9EE0079DD0E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AC2CF991D76D9AD003755C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,6 +382,66 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A6C99441E07D9EE0079DD0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A6C99451E07D9EE0079DD0E /* UInt32.swift in Sources */,
+				9A6C99461E07D9EE0079DD0E /* ASLClient.swift in Sources */,
+				9A6C99471E07D9EE0079DD0E /* ASLObject.swift in Sources */,
+				9A6C99481E07D9EE0079DD0E /* CPUInfo.swift in Sources */,
+				9A6C99491E07D9EE0079DD0E /* MemoryProfiller.swift in Sources */,
+				9A6C994A1E07D9EE0079DD0E /* AppDelegate.swift in Sources */,
+				9A6C994B1E07D9EE0079DD0E /* CPU.swift in Sources */,
+				9A6C994C1E07D9EE0079DD0E /* Network.swift in Sources */,
+				9A6C994D1E07D9EE0079DD0E /* CommonMacUtilies.m in Sources */,
+				9A6C994E1E07D9EE0079DD0E /* ProcessInfo.swift in Sources */,
+				9A6C994F1E07D9EE0079DD0E /* Timer.swift in Sources */,
+				9A6C99501E07D9EE0079DD0E /* SysControlUtil.swift in Sources */,
+				9A6C99511E07D9EE0079DD0E /* ASLAttributeKey.swift in Sources */,
+				9A6C99521E07D9EE0079DD0E /* ASLPriorityLevel.swift in Sources */,
+				9A6C99531E07D9EE0079DD0E /* Int32.swift in Sources */,
+				9A6C99541E07D9EE0079DD0E /* CPUUsageController.m in Sources */,
+				9A6C99551E07D9EE0079DD0E /* UInt64.swift in Sources */,
+				9A6C99561E07D9EE0079DD0E /* SystemEventLogger.swift in Sources */,
+				9A6C99571E07D9EE0079DD0E /* DataLogger.swift in Sources */,
+				9A6C99581E07D9EE0079DD0E /* SystemInformationController.swift in Sources */,
+				9A6C99591E07D9EE0079DD0E /* DispalayCardController.swift in Sources */,
+				9A6C995A1E07D9EE0079DD0E /* SMC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A6C99641E07E1680079DD0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A6C99861E07E30B0079DD0E /* UInt64.swift in Sources */,
+				9A6C99851E07E3090079DD0E /* UInt32.swift in Sources */,
+				9A6C99841E07E3070079DD0E /* Int32.swift in Sources */,
+				9A6C99751E07E22B0079DD0E /* Timer.swift in Sources */,
+				9A6C99711E07E2210079DD0E /* MemoryProfiller.swift in Sources */,
+				9A6C996B1E07E1680079DD0E /* main.swift in Sources */,
+				9A6C996F1E07E1F40079DD0E /* DataLogger.swift in Sources */,
+				9A6C99721E07E2240079DD0E /* DispalayCardController.swift in Sources */,
+				9A6C99731E07E2260079DD0E /* Network.swift in Sources */,
+				9A6C99701E07E21E0079DD0E /* SystemInformationController.swift in Sources */,
+				9A6C99761E07E2310079DD0E /* ProcessInfo.swift in Sources */,
+				9A6C99771E07E2340079DD0E /* CommonMacUtilies.h in Sources */,
+				9A6C99791E07E23A0079DD0E /* CPUUsageController.h in Sources */,
+				9A6C99781E07E2370079DD0E /* CommonMacUtilies.m in Sources */,
+				9A6C997A1E07E23D0079DD0E /* CPUUsageController.m in Sources */,
+				9A6C99741E07E2290079DD0E /* CPUInfo.swift in Sources */,
+				9A6C99831E07E2F80079DD0E /* CPU.swift in Sources */,
+				9A6C997B1E07E2400079DD0E /* SysControlUtil.swift in Sources */,
+				9A6C997D1E07E2460079DD0E /* ASLAttributeKey.swift in Sources */,
+				9A6C997E1E07E2480079DD0E /* ASLClient.swift in Sources */,
+				9A6C99801E07E24C0079DD0E /* ASLPriorityLevel.swift in Sources */,
+				9A6C997F1E07E24A0079DD0E /* ASLObject.swift in Sources */,
+				9A6C997C1E07E2430079DD0E /* SystemEventLogger.swift in Sources */,
+				9A6C99811E07E2570079DD0E /* SMC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AC2CF971D76D9AD003755C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +485,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A6C99601E07D9EE0079DD0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Mac Configuration copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corebits.Mac-Configuration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac Configuration/UtilityClasses/Mac Configuration-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		9A6C99611E07D9EE0079DD0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Mac Configuration copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corebits.Mac-Configuration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac Configuration/UtilityClasses/Mac Configuration-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		9A6C996D1E07E1680079DD0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac Configuration/UtilityClasses/Mac Configuration-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		9A6C996E1E07E1680079DD0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mac Configuration/UtilityClasses/Mac Configuration-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
 		9AC2CFA61D76D9AD003755C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -402,6 +658,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A6C995F1E07D9EE0079DD0E /* Build configuration list for PBXNativeTarget "Mac Configuration copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A6C99601E07D9EE0079DD0E /* Debug */,
+				9A6C99611E07D9EE0079DD0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A6C996C1E07E1680079DD0E /* Build configuration list for PBXNativeTarget "MacConfig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A6C996D1E07E1680079DD0E /* Debug */,
+				9A6C996E1E07E1680079DD0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9AC2CF961D76D9AC003755C6 /* Build configuration list for PBXProject "Mac Configuration" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
