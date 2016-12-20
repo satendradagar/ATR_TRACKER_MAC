@@ -64,9 +64,32 @@ struct MemoryProfiller {
             }
             
         } catch { }
+        
+        
         return "Not found"
     }
 
     
+    static func getMountedVolumes() -> NSArray {
+        let volumes = NSMutableArray.init(capacity: 1)
+
+        do {
+            if let fileURLS:[NSURL] = try NSFileManager.defaultManager().mountedVolumeURLsIncludingResourceValuesForKeys(nil, options:.SkipHiddenVolumes)
+            {
+//                var finalUsageStr = "";
+                for url in fileURLS {
+//                    finalUsageStr += "\n";
+//                    finalUsageStr += MemoryProfiller.getVolumeFreeSpace(url.path!)
+                    volumes.addObject(MemoryProfiller.getVolumeFreeSpace(url.path!))
+                }
+                return volumes;
+            }
+            
+        } catch { }
+        
+        
+        return volumes
+    }
+  
 
 }

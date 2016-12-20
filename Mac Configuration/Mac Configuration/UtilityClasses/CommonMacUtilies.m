@@ -233,7 +233,7 @@ void printSample(struct cpusample *sample)
             
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             if (dict) {
-                NSLog(@"Response: %@",dict);
+//                NSLog(@"Response: %@",dict);
                 responseHandler([dict objectForKey:@"query"]);//Successfull case
             }
             else{

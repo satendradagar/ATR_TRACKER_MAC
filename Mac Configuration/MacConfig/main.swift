@@ -30,7 +30,8 @@ func applicationDidFinishLaunching() {
     
     DataLogger.logMessage("Video Card", message:DispayCard.videoCardDetails)
     DataLogger.logMessage("Audio Card", message:DispayCard.audioCardDetails)
-    DataLogger.logMessage("Hard Disk", message:MemoryProfiller.getMountedVolumesFreeSpace())
+    DataLogger.addObjects("Hard Disk", objects:MemoryProfiller.getMountedVolumes())
+
     // Setup SMC
     do {
         try SMCKit.open()
@@ -40,11 +41,13 @@ func applicationDidFinishLaunching() {
     }
     
     DataLogger.logMessage("CPU Load", message:CPUInfo.cpuLoadPercentString())
-    DataLogger.logMessage("Temperatures", message:CPUInfo.printTemperatureInformation())
-    DataLogger.logMessage("Fan", message:CPUInfo.printFanInformation())
+//    DataLogger.logMessage("Temperatures", message:CPUInfo.printTemperatureInformation())
+    DataLogger.addObjects("Temperatures", objects:CPUInfo.temperatureSensors())
+
+    DataLogger.addObjects("Fan", objects:CPUInfo.fanDetails())
     SMCKit.close();
     
-    DataLogger.logMessage("All Running Processes", message:ProcessInfo.allRunningProcess())
+    DataLogger.addObjects("All Running Processes", objects:ProcessInfo.allRunningProcessNames())
     
     //        let smcFanCount          = try! SMCKit.fanCount()
     //        let smcRPM               = try! SMCKit.fanCurrentSpeed(0)
@@ -58,18 +61,21 @@ func applicationDidFinishLaunching() {
     //        CommonMacUtilies.getCpuDetails();
     dispatch_async(dispatch_get_main_queue()) {
         
-        let logs = SystemEventLogger.getConsoleLogForAnHour();
-        var allMeesages = String();
-        
-        if (logs != nil) {
-            
-            for msg in logs! {
-                allMeesages += "\n"
-                allMeesages += msg
-            }
-            
+        if let logs = SystemEventLogger.getConsoleLogForAnHour(){
+//        var allMeesages = String();
+//
+//        if (logs != nil) {
+//            
+//            for msg in logs! {
+//                allMeesages += "\n"
+//                allMeesages += msg
+//            }
+//            
+//        }
+    
+        DataLogger.addObjects("Last Hour events", objects:logs)
         }
-        DataLogger.logMessage("Last Hour events:", message:allMeesages)
+//        DataLogger.logMessage("Last Hour events:", message:allMeesages)
         
         
     };

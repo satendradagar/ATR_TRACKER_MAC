@@ -27,7 +27,7 @@ static func getConsoleLogForAnHour() -> [String]? {
         client.search(query) { record in
             if let record = record {
                 let message = record.timestamp.description + ":::::" + record.message;
-                print(message)
+//                print(message)
                 logs?.append(message)
                 // we have a search query result record; process it here
             } else {

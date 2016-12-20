@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 class DataLogger {
-    static var dict = [String:String]()
+    static var dict = NSMutableDictionary.init(capacity: 1)
     
     static func logMessage(let label:String , message:String ) -> Void {
 //        let delegate: AppDelegate = NSApp.delegate as! AppDelegate
@@ -21,8 +21,19 @@ class DataLogger {
 //        delegate.mainTextView.append(printableStr)
 //        delegate.mainTextView.append("---------------------------------------------------------------------------------------------\n\n")
     }
+
+    static func addObjects(let label:String , objects:NSArray ) -> Void {
+        //        let delegate: AppDelegate = NSApp.delegate as! AppDelegate
+//        let printableStr = "\(label): \(message)\n"
+        dict[label] = objects
+        
+        //        print(printableStr);
+        //        delegate.mainTextView.append(printableStr)
+        //        delegate.mainTextView.append("---------------------------------------------------------------------------------------------\n\n")
+    }
     
-    static func logDictionary() -> [String:String] {
+
+    static func logDictionary() -> NSDictionary {
         
         return dict
     }

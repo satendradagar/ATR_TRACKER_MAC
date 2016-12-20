@@ -23,4 +23,22 @@ class ProcessInfo {
         }
         return appNames;
     }
+    
+    static func allRunningProcessNames() ->NSArray{
+        
+        let appNames = NSMutableArray.init(capacity: 2)
+        
+        let runningApps = NSWorkspace.sharedWorkspace().runningApplications
+        
+        for app:NSRunningApplication in runningApps {
+            if let nam = app.localizedName
+            {
+                appNames.addObject(nam)
+
+            }
+            
+        }
+        return appNames;
+    }
+
 }
