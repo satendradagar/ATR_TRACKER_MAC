@@ -45,25 +45,36 @@ class CPUInfo {
         }
         
         for fan in allFans {
+            var tempDict = Dictionary<String,String>()
+
             //        print("[id \(fan.id)] Fan Name:\(fan.name)")
             //        print("\tMin:      \(fan.minSpeed) RPM")
             //        print("\tMax:      \(fan.maxSpeed) RPM")
-            var fanInfo = ""
+//            var fanInfo = ""
             
-            fanInfo += "[id \(fan.id)] Fan Name:\(fan.name)";
-            fanInfo += "\tMin:      \(fan.minSpeed) RPM";
-            fanInfo += "\tMax:      \(fan.maxSpeed) RPM";
-            
+//            fanInfo += "[id \(fan.id)] Fan Name:\(fan.name)";
+//            fanInfo += "\tMin:      \(fan.minSpeed) RPM";
+//            fanInfo += "\tMax:      \(fan.maxSpeed) RPM";
+            tempDict["FanName"] = fan.name
+            tempDict["FanID"] = "\(fan.id)"
+            tempDict["MinSpeed"] = "\(fan.minSpeed) RPM"
+            tempDict["MaxSpeed"] = "\(fan.maxSpeed) RPM"
+            tempDict["CurrentSpeed"] = "\(fan.maxSpeed) RPM"
+
             
             guard let currentSpeed = try? SMCKit.fanCurrentSpeed(fan.id) else {
                 print("\n\tCurrent:  NA")
-                fanInfo += "\tCurrent:  NA";
-                fanObjects.addObject(fanInfo)
+//                fanInfo += "\tCurrent:  NA";
+                tempDict["CurrentSpeed"] = "NA"
+
+                fanObjects.addObject(tempDict)
 
                 return fanObjects
             }
-            fanInfo += "\tCurrent:  \(currentSpeed) RPM";
-            fanObjects.addObject(fanInfo)
+            tempDict["CurrentSpeed"] = "\(currentSpeed) RPM"
+
+//            fanInfo += "\tCurrent:  \(currentSpeed) RPM";
+            fanObjects.addObject(tempDict)
             //        print("\tCurrent:  \(currentSpeed) RPM")
         }
         return fanObjects;
@@ -141,25 +152,31 @@ static func printFanInformation() -> String{
         
         
         for sensor in sensors {
-            var sensorDetails = ""
-            
-            let padding = String(count: longestSensorNameCount -
-                sensor.name.characters.count,
-                                 repeatedValue: Character(" "))
+//            var sensorDetails = ""
+            var tempDict = Dictionary<String,String>()
+//            let padding = String(count: longestSensorNameCount -
+//                sensor.name.characters.count,
+//                                 repeatedValue: Character(" "))
             
             //            print("\(sensor.name + padding)   \(sensor.code.toString())  ", terminator: "")
-            sensorDetails += "\(sensor.name + padding)   \(sensor.code.toString())  ";
+//            sensorDetails += "\(sensor.name + padding)   \(sensor.code.toString())  ";
+            tempDict["Name"] = sensor.name
+            tempDict["ResouceType"] = sensor.code.toString()
             
             guard let temperature = try? SMCKit.temperature(sensor.code) else {
                 //                print("NA")
-                sensorDetails += "NA"
-                sensorObjs.addObject("NA")
+//                sensorDetails += "NA"
+                tempDict["Value"] = "NA"
+
+                sensorObjs.addObject(tempDict)
+                
                 return sensorObjs
             }
-            
-            sensorDetails += "\(temperature)°C ";
+            tempDict["Value"] = "\(temperature)°C"
+
+//            sensorDetails += "\(temperature)°C ";
             //            print("\(temperature)°C ")
-            sensorObjs.addObject(sensorDetails)
+            sensorObjs.addObject(tempDict)
         }
         return sensorObjs;
     }

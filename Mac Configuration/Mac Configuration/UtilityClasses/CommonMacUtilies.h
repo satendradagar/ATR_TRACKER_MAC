@@ -12,9 +12,13 @@
 
 +(vm_statistics_data_t)memoryStatus;
 
-+(NSString *)videoCardInfo;
++(NSArray *)videoCardInfo;
 
-+ (NSString*)getAudioDevices;
++ (NSArray*)getAudioDevices;
+
++ (NSString *)machineSerialNumber;
+
++ (NSString *)processorCoreCount;
 
 +(void) getCpuDetails;
 
@@ -22,5 +26,7 @@
 
 
 + (NSString *)getLocalIPAddress;
+
++ (NSArray *)getAllAvailableNetworkInterfaces;
 
 @end

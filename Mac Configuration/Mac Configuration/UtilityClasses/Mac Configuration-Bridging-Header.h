@@ -5,3 +5,4 @@
 #import "CommonMacUtilies.h"
 #import "CPUUsageController.h"
 #import <asl.h>
+#include <ifaddrs.h>

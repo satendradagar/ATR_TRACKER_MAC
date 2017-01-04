@@ -11,13 +11,13 @@ import Cocoa
 
 struct DispayCard {
     
-    static var videoCardDetails: String {
+    static var videoCardDetails: NSArray {
         
         return CommonMacUtilies.videoCardInfo()
         
     }
 
-    static var audioCardDetails: String {
+    static var audioCardDetails: NSArray {
         
         return CommonMacUtilies.getAudioDevices()
         

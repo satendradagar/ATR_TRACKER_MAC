@@ -60,6 +60,12 @@
 		9A6C99841E07E3070079DD0E /* Int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED85791D7B2862001297FD /* Int32.swift */; };
 		9A6C99851E07E3090079DD0E /* UInt32.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857A1D7B2862001297FD /* UInt32.swift */; };
 		9A6C99861E07E30B0079DD0E /* UInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ED857B1D7B2862001297FD /* UInt64.swift */; };
+		9A781FE01E1D05BD006A2703 /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A781FDD1E1D05BD006A2703 /* NICInfo.m */; };
+		9A781FE11E1D05BD006A2703 /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A781FDD1E1D05BD006A2703 /* NICInfo.m */; };
+		9A781FE21E1D05BD006A2703 /* NICInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A781FDD1E1D05BD006A2703 /* NICInfo.m */; };
+		9A781FE31E1D05BD006A2703 /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A781FDF1E1D05BD006A2703 /* NICInfoSummary.m */; };
+		9A781FE41E1D05BD006A2703 /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A781FDF1E1D05BD006A2703 /* NICInfoSummary.m */; };
+		9A781FE51E1D05BD006A2703 /* NICInfoSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A781FDF1E1D05BD006A2703 /* NICInfoSummary.m */; };
 		9A8A88101D79C595009A8926 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A880D1D79C595009A8926 /* SMC.swift */; };
 		9A8A88131D79CDB7009A8926 /* CPUUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A88121D79CDB7009A8926 /* CPUUsageController.m */; };
 		9AA8D65E1D771EE400588820 /* SystemInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8D65D1D771EE400588820 /* SystemInformationController.swift */; };
@@ -104,6 +110,10 @@
 		9A6C99631E07D9EE0079DD0E /* Mac Configuration copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mac Configuration copy-Info.plist"; path = "/Users/satendrasingh/Documents/External/ATERA_MAC/Mac Configuration/Mac Configuration copy-Info.plist"; sourceTree = "<absolute>"; };
 		9A6C99681E07E1680079DD0E /* MacConfig */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacConfig; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6C996A1E07E1680079DD0E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9A781FDC1E1D05BD006A2703 /* NICInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfo.h; sourceTree = "<group>"; };
+		9A781FDD1E1D05BD006A2703 /* NICInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfo.m; sourceTree = "<group>"; };
+		9A781FDE1E1D05BD006A2703 /* NICInfoSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NICInfoSummary.h; sourceTree = "<group>"; };
+		9A781FDF1E1D05BD006A2703 /* NICInfoSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NICInfoSummary.m; sourceTree = "<group>"; };
 		9A8A880C1D79C595009A8926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8A880D1D79C595009A8926 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
 		9A8A880E1D79C595009A8926 /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
@@ -178,6 +188,17 @@
 			path = MacConfig;
 			sourceTree = "<group>";
 		};
+		9A781FDB1E1D05BD006A2703 /* NICInfo Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9A781FDC1E1D05BD006A2703 /* NICInfo.h */,
+				9A781FDD1E1D05BD006A2703 /* NICInfo.m */,
+				9A781FDE1E1D05BD006A2703 /* NICInfoSummary.h */,
+				9A781FDF1E1D05BD006A2703 /* NICInfoSummary.m */,
+			);
+			path = "NICInfo Classes";
+			sourceTree = "<group>";
+		};
 		9A8A880B1D79C595009A8926 /* SMCKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +271,7 @@
 				9A8A88121D79CDB7009A8926 /* CPUUsageController.m */,
 				9AA8D6641D7737A400588820 /* SysControlUtil.swift */,
 				9A3EDC681D856CAE00FEC67F /* SystemEventLogger.swift */,
+				9A781FDB1E1D05BD006A2703 /* NICInfo Classes */,
 				9A3EDC6A1D857B8200FEC67F /* ALConsole */,
 				9AB77ED61D7847BC0081A829 /* Mac Configuration-Bridging-Header.h */,
 			);
@@ -395,11 +417,13 @@
 				9A6C994B1E07D9EE0079DD0E /* CPU.swift in Sources */,
 				9A6C994C1E07D9EE0079DD0E /* Network.swift in Sources */,
 				9A6C994D1E07D9EE0079DD0E /* CommonMacUtilies.m in Sources */,
+				9A781FE11E1D05BD006A2703 /* NICInfo.m in Sources */,
 				9A6C994E1E07D9EE0079DD0E /* ProcessInfo.swift in Sources */,
 				9A6C994F1E07D9EE0079DD0E /* Timer.swift in Sources */,
 				9A6C99501E07D9EE0079DD0E /* SysControlUtil.swift in Sources */,
 				9A6C99511E07D9EE0079DD0E /* ASLAttributeKey.swift in Sources */,
 				9A6C99521E07D9EE0079DD0E /* ASLPriorityLevel.swift in Sources */,
+				9A781FE41E1D05BD006A2703 /* NICInfoSummary.m in Sources */,
 				9A6C99531E07D9EE0079DD0E /* Int32.swift in Sources */,
 				9A6C99541E07D9EE0079DD0E /* CPUUsageController.m in Sources */,
 				9A6C99551E07D9EE0079DD0E /* UInt64.swift in Sources */,
@@ -419,10 +443,12 @@
 				9A6C99851E07E3090079DD0E /* UInt32.swift in Sources */,
 				9A6C99841E07E3070079DD0E /* Int32.swift in Sources */,
 				9A6C99751E07E22B0079DD0E /* Timer.swift in Sources */,
+				9A781FE21E1D05BD006A2703 /* NICInfo.m in Sources */,
 				9A6C99711E07E2210079DD0E /* MemoryProfiller.swift in Sources */,
 				9A6C996B1E07E1680079DD0E /* main.swift in Sources */,
 				9A6C996F1E07E1F40079DD0E /* DataLogger.swift in Sources */,
 				9A6C99721E07E2240079DD0E /* DispalayCardController.swift in Sources */,
+				9A781FE51E1D05BD006A2703 /* NICInfoSummary.m in Sources */,
 				9A6C99731E07E2260079DD0E /* Network.swift in Sources */,
 				9A6C99701E07E21E0079DD0E /* SystemInformationController.swift in Sources */,
 				9A6C99761E07E2310079DD0E /* ProcessInfo.swift in Sources */,
@@ -455,11 +481,13 @@
 				C4ED85751D7B27FB001297FD /* CPU.swift in Sources */,
 				C4ED85801D7B29B0001297FD /* Network.swift in Sources */,
 				9AB77ED91D7847BC0081A829 /* CommonMacUtilies.m in Sources */,
+				9A781FE01E1D05BD006A2703 /* NICInfo.m in Sources */,
 				C40B30081D7C691B00FAFE14 /* ProcessInfo.swift in Sources */,
 				C4ED85821D7B2D37001297FD /* Timer.swift in Sources */,
 				9AA8D6651D7737A400588820 /* SysControlUtil.swift in Sources */,
 				9A3EDC701D857B8200FEC67F /* ASLAttributeKey.swift in Sources */,
 				9A3EDC731D857B8200FEC67F /* ASLPriorityLevel.swift in Sources */,
+				9A781FE31E1D05BD006A2703 /* NICInfoSummary.m in Sources */,
 				C4ED857C1D7B2862001297FD /* Int32.swift in Sources */,
 				9A8A88131D79CDB7009A8926 /* CPUUsageController.m in Sources */,
 				C4ED857E1D7B2862001297FD /* UInt64.swift in Sources */,
@@ -674,6 +702,7 @@
 				9A6C996E1E07E1680079DD0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AC2CF961D76D9AC003755C6 /* Build configuration list for PBXProject "Mac Configuration" */ = {
 			isa = XCConfigurationList;

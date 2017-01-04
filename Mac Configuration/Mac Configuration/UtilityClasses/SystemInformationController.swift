@@ -72,7 +72,12 @@ class SystemInformationController {
         
         return Sysctl.cpuName
     }
-    
+
+    static func processorSpeed() -> String? {
+        
+        return "\(Sysctl.cpuFreq)"
+    }
+
     
     /// How long has the system been up?
      static func uptime() -> NSDate? {
@@ -108,4 +113,14 @@ class SystemInformationController {
         return NSDate.init(timeIntervalSince1970: timeInt)
     }
     
+    static func upTimeUTC() -> String{
+        let upTime = uptime()
+        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC")
+        dateFormatter.dateStyle = .FullStyle
+        dateFormatter.timeStyle = .FullStyle
+        
+        return dateFormatter.stringFromDate(upTime!)
+    }
 }

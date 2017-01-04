@@ -39,35 +39,42 @@ struct MemoryProfiller {
         return Int64(usedMemory)
     }
     
-    static func getVolumeFreeSpace(volumePath:String) -> String {
+    static func getVolumeFreeSpace(volumePath:String) -> Dictionary<String,String> {
+
+        var disk = Dictionary<String,String>()
+
         do {
             let fileAttributes = try NSFileManager.defaultManager().attributesOfFileSystemForPath(volumePath)
-             let freeSize = Int64(fileAttributes[NSFileSystemFreeSize] as! CGFloat)
-             let totalSize = Int64(fileAttributes[NSFileSystemSize] as! CGFloat)
-            
-            return "\(memoryRepresentation(freeSize)) free of \(memoryRepresentation(totalSize)) :[\(volumePath)]"
+            let freeSize = Int64(fileAttributes[NSFileSystemFreeSize] as! CGFloat)
+            let totalSize = Int64(fileAttributes[NSFileSystemSize] as! CGFloat)
+            disk["MountName"] = volumePath
+            disk["Total"] = totalSize.description
+            disk["Free"] = freeSize.description
+            return disk
+
+//            return "\(memoryRepresentation(freeSize)) free of \(memoryRepresentation(totalSize)) :[\(volumePath)]"
             
         } catch { }
-        return "Not found"
+        return disk
     }
 
-    static func getMountedVolumesFreeSpace() -> String {
-        do {
-            if let fileURLS:[NSURL] = try NSFileManager.defaultManager().mountedVolumeURLsIncludingResourceValuesForKeys(nil, options:.SkipHiddenVolumes)
-            {
-                var finalUsageStr = "";
-                for url in fileURLS {
-                    finalUsageStr += "\n";
-                    finalUsageStr += MemoryProfiller.getVolumeFreeSpace(url.path!)
-                }
-                return finalUsageStr;
-            }
-            
-        } catch { }
-        
-        
-        return "Not found"
-    }
+//    static func getMountedVolumesFreeSpace() -> String {
+//        do {
+//            if let fileURLS:[NSURL] = try NSFileManager.defaultManager().mountedVolumeURLsIncludingResourceValuesForKeys(nil, options:.SkipHiddenVolumes)
+//            {
+//                var finalUsageStr = "";
+//                for url in fileURLS {
+//                    finalUsageStr += "\n";
+//                    finalUsageStr += MemoryProfiller.getVolumeFreeSpace(url.path!)
+//                }
+//                return finalUsageStr;
+//            }
+//            
+//        } catch { }
+//        
+//        
+//        return "Not found"
+//    }
 
     
     static func getMountedVolumes() -> NSArray {

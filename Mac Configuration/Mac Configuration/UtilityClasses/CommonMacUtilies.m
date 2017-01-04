@@ -9,6 +9,8 @@
 #import "CommonMacUtilies.h"
 #import <CoreAudio/CoreAudio.h>
 #import <asl.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "NicInfoSummary.h"
 
 struct cpusample {
     uint64_t totalSystemTime;
@@ -59,7 +61,9 @@ void sample(struct cpusample *sample)
         return vmstat;
 }
 
-+(NSString *)videoCardInfo{
++(NSArray *)videoCardInfo{
+    
+    NSMutableArray *videoCards = [NSMutableArray new];
     
     NSString *s = @"";
         // Check the PCI devices for video cards.
@@ -94,6 +98,7 @@ void sample(struct cpusample *sample)
                         // Create a string from the CFDataRef.
                     s = [[NSString alloc] initWithData:(__bridge NSData *)model
                                                         encoding:NSASCIIStringEncoding];
+                    [videoCards addObject:s];
 //                    NSLog(@"Found GPU: %@", s);
                 }
             }
@@ -108,10 +113,10 @@ void sample(struct cpusample *sample)
             // Release the entry_iterator created by IOServiceGetMatchingServices.
         IOObjectRelease(entry_iterator);
         }
-    return s;
+    return videoCards;
 }
 
-+ (NSString*)getAudioDevices
++ (NSArray*)getAudioDevices
 {
     AudioObjectPropertyAddress propertyAddress = {
         kAudioHardwarePropertyDevices,
@@ -187,8 +192,8 @@ void sample(struct cpusample *sample)
         }
     
     free(audioDevices);
-    
-    return [devices componentsJoinedByString:@", "];
+    return devices;
+//    return [devices componentsJoinedByString:@", "];
 }
 
 +(void) getCpuDetails{
@@ -340,5 +345,89 @@ void printSample(struct cpusample *sample)
     return consoleLog;
 }
 
++ (NSString *)machineSerialNumber
+{
+    NSString *serial = nil;
+    io_service_t platformExpert = IOServiceGetMatchingService(kIOMasterPortDefault,
+                                                              IOServiceMatching("IOPlatformExpertDevice"));
+    if (platformExpert) {
+        CFTypeRef serialNumberAsCFString =
+        IORegistryEntryCreateCFProperty(platformExpert,
+                                        CFSTR(kIOPlatformSerialNumberKey),
+                                        kCFAllocatorDefault, 0);
+        if (serialNumberAsCFString) {
+            serial = CFBridgingRelease(serialNumberAsCFString);
+        }
+        
+        IOObjectRelease(platformExpert);
+    }
+    return serial;
+}
 
++ (NSString *)processorCoreCount{
+    return [NSString stringWithFormat:@"%lu",(unsigned long)[[NSProcessInfo processInfo] processorCount]];
+}
+
++ (NSArray *)getAllAvailableNetworkInterfaces{
+//    SCDynamicStoreRef storeRef = SCDynamicStoreCreate(NULL, (CFStringRef)@"FindCurrentInterfaceIpMac", NULL, NULL);
+//    CFPropertyListRef global = SCDynamicStoreCopyValue (storeRef,CFSTR("State:/Network/Interface"));
+//    id primaryInterface = [(__bridge NSDictionary *)global valueForKey:@"Interfaces"];
+//    
+//    for (NSString* item in primaryInterface)
+//        {
+//        NSLog(@"%@", item);
+//        }
+//    return primaryInterface;
+    
+//    NSMutableString* textToShow = [NSMutableString new] ;
+    
+        // Process NIC information
+        //  performs on PC : 100 times - 39ms, 1000 times - 345 ms
+        //  perfomrs on iPhone 4 : 100 times - 261ms, 1000 times - 1850ms
+    
+    NSMutableArray *interfaces = [NSMutableArray new];
+    NICInfoSummary* summary = [[NICInfoSummary alloc] init] ;
+    NSArray *nic_array = summary.nicInfos;
+    for(int i=0; i<nic_array.count; i++)
+        {
+        NSMutableDictionary *interface = [NSMutableDictionary new];
+    
+        NICInfo* nic_info = [nic_array objectAtIndex:i];
+        interface[@"interface"] = nic_info.interfaceName;
+        
+//        [textToShow appendFormat:@"interface : %@\r\n", nic_info.interfaceName];
+        if(nic_info.macAddress != nil)
+//            [textToShow appendFormat:@" - MAC : %@\r\n", [nic_info getMacAddressWithSeparator:@"-"]];
+        interface[@"MacAddress"] = [nic_info getMacAddressWithSeparator:@"-"];
+        [interfaces addObject:interface];
+            // ip can be multiple
+//        if(nic_info.nicIPInfos.count > 0)
+//            {
+//            [textToShow appendFormat:@" - IPv4 :\r\n"];
+//            for(int j=0; j<nic_info.nicIPInfos.count; j++)
+//                {
+//                NICIPInfo* ip_info = [nic_info.nicIPInfos objectAtIndex:j];
+//                [textToShow appendFormat:
+//                 @"    IP : %@\r\n    netmask : %@\r\n    broadcast : %@\r\n"
+//                 , ip_info.ip, ip_info.netmask, ip_info.broadcastIP];
+//                }
+//            }
+        
+            // ipv6 can be multiple, also.
+//        if(nic_info.nicIPv6Infos.count > 0)
+//            {
+//            [textToShow appendFormat:@" - IPv6 :\r\n"];
+//            for(int j=0; j<nic_info.nicIPv6Infos.count; j++)
+//                {
+//                NICIPInfo* ipv6_info = [nic_info.nicIPv6Infos objectAtIndex:j];
+//                [textToShow appendFormat:
+//                 @"    IP : %@\r\n    netmask : %@\r\n    broadcast : %@\r\n"
+//                 , ipv6_info.ip, ipv6_info.netmask, ipv6_info.broadcastIP];
+//                }
+//            }
+//        [textToShow appendFormat:@"\r\n"];
+        }
+
+    return interfaces;
+}
 @end

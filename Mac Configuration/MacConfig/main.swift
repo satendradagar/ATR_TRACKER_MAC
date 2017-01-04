@@ -12,6 +12,9 @@ import Foundation
 
 
 func applicationDidFinishLaunching() {
+    
+//    CommonMacUtilies.getAllAvailableNetworkInterfaces();
+//    exit(0);
     // Insert code here to initialize your application
     //        CPUUsageController.samplePrint();
     //        return;
@@ -22,14 +25,19 @@ func applicationDidFinishLaunching() {
     DataLogger.logMessage("User Name", message: SystemInformationController.loggedInUser()!)
     DataLogger.logMessage("Computer Model", message: SystemInformationController.computerModel()!)
     DataLogger.logMessage("Motherboard name", message: SystemInformationController.motherBoardType()!)
+    DataLogger.logMessage("MachineSerial", message:CommonMacUtilies.machineSerialNumber())
+    DataLogger.logMessage("ProcessorCount", message:CommonMacUtilies.processorCoreCount())
+    DataLogger.logMessage("ProcessorSpeed", message:SystemInformationController.processorSpeed()!)
+
     DataLogger.logMessage("Processor", message: SystemInformationController.processorType()!)
-    DataLogger.logMessage("Last Boot Time", message: (SystemInformationController.uptime()?.descriptionWithLocale(NSLocale.currentLocale()))!)
+    DataLogger.logMessage("Last Boot Time", message: SystemInformationController.upTimeUTC())
     
     DataLogger.logMessage("Ram", message:MemoryProfiller.totalRamDisplay)
     DataLogger.logMessage("UsedRam", message:MemoryProfiller.memoryRepresentation(MemoryProfiller.usedRam))
     
-    DataLogger.logMessage("Video Card", message:DispayCard.videoCardDetails)
-    DataLogger.logMessage("Audio Card", message:DispayCard.audioCardDetails)
+    DataLogger.addObjects("Video Card", objects:DispayCard.videoCardDetails)
+
+    DataLogger.addObjects("Audio Card", objects:DispayCard.audioCardDetails)
     DataLogger.addObjects("Hard Disk", objects:MemoryProfiller.getMountedVolumes())
 
     // Setup SMC
@@ -48,6 +56,10 @@ func applicationDidFinishLaunching() {
     SMCKit.close();
     
     DataLogger.addObjects("All Running Processes", objects:ProcessInfo.allRunningProcessNames())
+    DataLogger.addObjects("IP Address", objects:ProcessInfo.getIFAddresses())
+    DataLogger.addObjects("NetworkInterfaces", objects:CommonMacUtilies.getAllAvailableNetworkInterfaces())
+
+
     
     //        let smcFanCount          = try! SMCKit.fanCount()
     //        let smcRPM               = try! SMCKit.fanCurrentSpeed(0)
@@ -72,34 +84,54 @@ func applicationDidFinishLaunching() {
 //            }
 //            
 //        }
-    
+        
+
         DataLogger.addObjects("Last Hour events", objects:logs)
         }
-//        DataLogger.logMessage("Last Hour events:", message:allMeesages)
         
-        
-    };
-    CommonMacUtilies.getIPWithcompletionHandler { (ipAddress) in
-        
-        if nil != ipAddress{
-            DataLogger.logMessage("IP Address", message:ipAddress)
-        }
         let dict = DataLogger.logDictionary()
-        
         let jsonData = try! NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions.PrettyPrinted)
-        
+
         let jsonString = NSString(data: jsonData, encoding: NSUTF8StringEncoding)! as String
         //            let task = Process()
         //            task.launchPath = cmd
         //            task.arguments = args
-        
+
         //            let outpipe = NSPipe()
         //            task.standardOutput = outpipe
         //
         print(jsonString)
         exit(0)
-    }
+        //    }
+//        DataLogger.logMessage("Last Hour events:", message:allMeesages)
+        
+        
+    };
+    
+
+//    CommonMacUtilies.getIPWithcompletionHandler { (ipAddress) in
+//        
+//        if nil != ipAddress{
+//            DataLogger.logMessage("IP Address", message:ipAddress)
+//        }
+//        let dict = DataLogger.logDictionary()
+//        
+//        let jsonData = try! NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions.PrettyPrinted)
+//        
+//        let jsonString = NSString(data: jsonData, encoding: NSUTF8StringEncoding)! as String
+//        //            let task = Process()
+//        //            task.launchPath = cmd
+//        //            task.arguments = args
+//        
+//        //            let outpipe = NSPipe()
+//        //            task.standardOutput = outpipe
+//        //
+//        print(jsonString)
+//        exit(0)
+//    }
     //        CPUUsageController.printNetwork();
+    
+    
 }
 
 applicationDidFinishLaunching()
